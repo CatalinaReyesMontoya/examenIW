@@ -1,5 +1,5 @@
 Mostrar la lista de los contactos de un usuario
-<a href="{{ url ('empleado/create')}}">Registrar nuevo empleado</a>
+<a href="{{ url ('/create')}}">Registrar nuevo empleado</a>
 
 <table class="table table-light">
   <thead class:"thead-light">
@@ -26,15 +26,14 @@ Mostrar la lista de los contactos de un usuario
       <td>{{ $contacto-> Correo }}</td>
       <td>
       
-      <a href="{{ url('/empleado/'.$empleado->id.'/edit') }}"> Editar</a>
+      <a href="{{ url('/contacto/'.$contacto->id.'/edit') }}"> Editar</a>
       
       
-      <form action="{{ url('/empleado/'.$empleado->id )}}" method="post">
+      <form action="{{ url('/contacto/'.$contacto->id )}}" method="post">
       @csrf 
       {{ method_field('DELETE')}}
       <input type="submit" onclick="return confirm('¿Quieres borrar?')" value="Borrar">
       </form>
-      
       </td>
     </tr>
     @endforeach

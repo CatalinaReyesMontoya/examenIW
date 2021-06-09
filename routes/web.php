@@ -23,3 +23,12 @@ Route::get('/', function () {
 Route::get('/', function(){
     return view('/contacto.index');
 });
+
+Route::get('/create', function(){
+    return view('/contacto.create');
+});
+
+Route::get('/edit', function(){
+    return view('/contacto.edit');
+});
+
