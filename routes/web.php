@@ -20,6 +20,6 @@ Route::get('/', function () {
 
 //Route::resource('contactos', ContactoController::class);
 
-Route::get('/contacto', function(){
+Route::get('/', function(){
     return view('/contacto.index');
 });
